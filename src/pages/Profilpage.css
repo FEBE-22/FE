@@ -1,0 +1,128 @@
+.profil{
+    background-color: #F1F1F1;
+}
+.profil-left{
+    margin-left: 8%;
+    margin-top: 20%;
+}
+.profil-menu{
+    border-radius: 10px;
+    padding: 12px 30px;
+    cursor: pointer;
+    transition: .25s;
+}
+.profil-icon{
+    width: 32px;
+    height: 32px;
+    color: #000;
+}
+.profil-menu-title{
+    font-size: 1.25rem;
+    color: #000;
+}
+.horizontal-rule{
+    height: 2px;
+}
+.profil-menu:hover{
+    background-color: #e0e3e7;
+}
+.content-wrapper{
+    border-radius: 10px;
+    border: solid #2C26261A;
+}
+.content-header{
+    text-align: center;
+    padding: 48px;
+}
+.kym{
+    margin-top: 12px;
+}
+.list-input{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.list-input-width{
+    width: 48%;
+}
+.input-wrapper{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border: solid thin black;
+    border-radius: 5px;
+    margin: 2px 0;
+}
+.input-radio{
+    display: flex;
+    align-items: center;
+    height: 60%;
+}
+.input-radio-value{
+    display: flex;
+    align-items: center;
+}
+.input-form-1{
+    width: 90%;
+}
+.input-form-2{
+    width: 95%;
+    resize: none;
+}
+.input-form-1, .input-form-2{
+    padding: 5px 0;
+    border: transparent;
+}
+.input-label{
+    font-weight: 500;
+}
+input[name='jenis_kelamin']{
+    width: 20px;
+    height: 20px;
+}
+.btn-1{
+    background-color: #6599E8;
+    color: #ffff;
+    border: transparent;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* Responsive */
+@media screen and (max-width: 1024px) {
+    input[name='jenis_kelamin']{
+        width: 18px;
+        height: 18px;
+    }
+    .jk{
+        font-size: 0.9rem;
+    }
+}
+@media screen and (max-width: 768px) {
+    .profil-icon{
+        width: 24px;
+        height: 24px;
+    }
+    .loh{
+        display: none;
+    }
+    .profil-menu{
+        width: 85px;
+        margin: auto;
+    }
+    .kym{
+        margin-top: 0;
+    }
+    .list-input-width{
+        width: 100%;
+    }
+    .inc{
+        margin-top: 12px;
+    }
+    .btn-1{
+        padding: 5px;
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,36 @@
+.cardWrapper {
+    margin: 20px;
+    margin-top: 5px;
+}
+
+.cardWrapper img {
+    height: 170px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.cardContent {
+    width: 400px;
+    height: 170px;
+    background: transparent;
+    padding: 20px;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+h5 .cardTitle {
+    font-size: 1.3em;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+p .cardBody {
+    font-size: 9em;
+    line-height: 1.5;
+}
+
+p .cardText {
+    font-size: 9em;
+    line-height: 1.5;
+}

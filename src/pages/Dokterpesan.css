@@ -1,0 +1,149 @@
+.wrap-dokter{
+    padding: 3em;
+    padding-left: 3em;
+}
+
+.wrap-dokter h3{
+    font-size: 1.2em;
+    font-weight: 650;
+}
+
+.detail-dokter{
+    display: flex;
+    margin-top: 2em;
+    flex-wrap: wrap;
+}
+
+.dd-img{
+    width: 18em;
+    height: 12em;
+    border: 1px solid black;
+    margin-right: 1em;
+}
+
+.dd-right{
+    margin-top: 1em;
+
+}
+
+.detail-info-submit{
+    margin-top: 1em;
+}
+
+.detail-info-submit h4{
+    margin-top: 1em;
+    font-size: 1.1em;
+    font-weight: 600;
+    padding-top: 0.2em;
+    padding-bottom: 0.1em;
+}
+
+.info-text{
+    border: solid 1px #626262;
+    height: 7em;
+    padding: 0.1em;
+    padding-left: 0.275em;
+    overflow-y: scroll;
+}
+
+.info-text p{
+    font-size: 0.9em;
+}
+.visit-check{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.input-container{
+    color: #6599E8;
+    position: relative;
+    margin-top: 0.7em;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-right: 1.5em;
+    width: 200px;
+}
+
+.input-container .b-label{
+    border: solid 1px #6599E8;
+    cursor: pointer;
+    border-radius: 0.3em;
+    padding: 0.2em;
+    width: 100%;
+    height: 100%;
+    transition: all 200ms ease;
+}
+
+
+
+.sch-check{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    opacity: 0;
+}
+
+input:checked + .b-label{
+    background-color: #6599E8;
+    color: #ffff;
+}
+
+.wrap-pesan {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.order-submit{
+    margin-top: 2.2em;
+    padding: 0.5em;
+    padding-left: 2.2em;
+    padding-right: 2.2em;
+    border-radius: 8px;
+    background-color: #6599E8;
+    color: #ffff;
+    border: solid 1px #ffff;
+}
+
+
+
+/* Responsive */
+
+@media screen and (max-width: 926px) {
+    .wrap-pesan{
+        justify-content: center;
+    }
+    
+}
+@media screen and (max-width: 768px){
+    .wrap-pesan{
+        justify-content: center;
+    }
+
+}
+@media screen and (max-width: 576px){
+    .wrap-pesan{
+        justify-content: flex-start;
+    }
+  
+}
+@media screen and (max-width: 375px){
+    .wrap-pesan{
+        justify-content: flex-start;
+    }
+    
+}
+@media screen and (max-width: 320px){
+    .wrap-pesan{
+        justify-content: flex-start;
+    }
+    
+}
+
+@media screen and (max-width: 300px){
+    .wrap-pesan{
+        justify-content: flex-start;
+    }
+    
+}

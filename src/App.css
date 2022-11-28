@@ -1,41 +1,166 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Nav */
+nav{
+    display: flex;
+    justify-content: center;
+    border-bottom: solid thin #E1E1E1;
+}
+.nav-content{
+    width: 45%;
+    align-self: center;
+}
+nav img{
+    width: 76px;
+    height: 90px;
+}
+.left{
+    display: flex;
+    align-items: center;
+}
+.right label{
+    float: right;
+    cursor: pointer;
+}
+.right label i{
+    color: #F03E85;
+}
+.right div{
+    display: none;
+    background: transparent;
+    border: none;
+}
+nav ul{
+    float: right;
+    margin: auto 0;
+}
+nav ul li{
+    display: inline-block;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #000;
+    font-size: 1rem;
+    transition: .4s;
+}
+nav ul li a[href="/login"]{ 
+    padding: 12px 32px;
+}
+nav ul li a[href="/login"], .row a[href="/login"]{
+    color: #fff;
+    border-radius: 10px;
+    font-weight: 800;
+    background-color: #6599E8;
+}
+nav ul li img{
+    width: 50px;
+    height: 50px;
+}
+nav ul li img, .container img{
+    margin-right: 8px;
+}
+nav span, .container span{
+    font-weight: 800;
+}
+nav span[name='tele']{
+    color: #6599E8;
+}
+nav span[name='doc']{
+    color: #F03E85;
+}
+nav label i{
+    font-size: 2rem;
+}
+.container{
+    display: none;
+}
+.container img{
+    width: 70px;
+    height: 70px;
+}
+div.row{
+    width: 101%;
+}
+.row a[href="/"]{
+    padding-right: 91%;
+    color: #000;
+}
+.row a[href="#about-us"]{
+    padding-right: 85%;
+}
+.row a[href="/login"]{
+    padding: 12px 38vw;
+}
+.nav-icon{
+    width: 32px;
+    height: 32px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
+/* Hover */
+a[href="/"]:hover, a[href="#about-us"]:hover, a[href="/login"]:hover{
+    color: #6599E8;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+a[href="/login"]:hover{
+    background-color: #65DBE8;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#check-1{
+    display: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* Responsive */
+@media screen and (max-width: 1612px) {
+    #check-1:checked~.container{
+        display: none;
+    }
 }
-
-.card {
-  padding: 2em;
+@media screen and (max-width: 926px) {
+    .right ul{
+        display: none;
+    }
+    .right div{
+        display: unset;
+    }
+    #check-1:checked~.container{
+        display: unset;
+    }
 }
-
-.read-the-docs {
-  color: #888;
+@media screen and (max-width: 768px){
+    .row a[href="#about-us"]{
+        padding-right: 83%;
+    }
+}
+@media screen and (max-width: 576px){
+    nav img{
+        width: 56px;
+        height: 70px;
+    }
+    nav span{
+        font-size: 1rem;
+    }
+    nav label i{
+        font-size: 1rem;
+    }
+    .nav-icon{
+        width: 24px;
+        height: 24px;
+    }
+    .container img{
+        width: 50px;
+        height: 50px;
+    }
+    .row a[href="#about-us"]{
+        padding-right: 69%;
+    }
+    .row a[href="/login"]{
+        padding: 12px 32vw;
+    }
+}
+@media screen and (max-width: 375px){
+    .row a[href="#about-us"]{
+        padding-right: 64%;
+    }
+}
+@media screen and (max-width: 320px){
+    .row a[href="#about-us"]{
+        padding-right: 57%;
+    }
 }
