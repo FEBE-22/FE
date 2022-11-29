@@ -19,12 +19,6 @@ function ProfilMenu({style1, style2, style3}) {
                         <div className='col loh'><span className='profil-menu-title'>Riwayat Kesehatan</span></div>
                     </div>
                 </div>
-                <div className='my-4 border border-0 profil-menu' style={{backgroundColor: style3}}>
-                    <div className="row align-items-center justify-content-center">
-                        <div className='col-lg-1 w-auto m-auto'><FaUserMd className='profil-icon' size={'100%'}/></div>
-                        <div className='col loh'><span className='profil-menu-title'>Dokter Favorit</span></div>
-                    </div>
-                </div>
                 <div className='my-4 profil-rule'>
                     <div>
                         <div className='bg-black bg-opacity-10 horizontal-rule'></div>

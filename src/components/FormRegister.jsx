@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import axios from 'axios'
+
+const url = 'https://be-production-85d3.up.railway.app/user/register'
 
 function FormRegister() {
   const [namaDepan, setNamaDepan] = useState('')
@@ -9,25 +12,24 @@ function FormRegister() {
   const [confirmPassword, setConfirmPassword] = useState('')
   const validasiHuruf = /^[a-zA-Z ]+$/;
 
-  function handleRegister(e){
+  const handleRegister = (e) => {
     e.preventDefault()
 
     if (namaDepan.match(validasiHuruf) && namaBelakang.match(validasiHuruf)) {
         if (password.length >= 6){
             if (password == confirmPassword){
-                const newDataUser = {
-                    namaDepan: namaDepan,
-                    namaBelakang: namaBelakang,
-                    email: email,
-                    password: password,
-                    telepon: '',
-                    jk: '',
-                    tempatLahir: '',
-                    tanggalLahir: '',
-                    alamat: ''
-                }
-                
-                alert("Terima kasih sudah mendaftar, silahkan login")
+                axios.post(url, 
+                    {
+                        nama_depan: namaDepan,
+                        nama_belakang: namaBelakang,
+                        email: email,
+                        password: password
+                    }
+                ).then((res) => {
+                    alert(res.data.message)
+                }).catch((res) => {
+                    alert('Email Sudah Digunakan')
+                })
                 
                 setNamaDepan('')
                 setNamaBelakang('')

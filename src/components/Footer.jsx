@@ -5,31 +5,31 @@ import {mail} from 'react-icons-kit/entypo/mail'
 import {instagram} from 'react-icons-kit/fa/instagram'
 import { useState } from 'react'
 import React from 'react'
+import axios from 'axios'
+
+const url = 'https://be-production-85d3.up.railway.app/home'
 
 function Footer() {
     const [namaLengkap, setNamaLengkap] = useState('')
     const [emailKeluhan, setEmailKeluhan] = useState('')
     const [keluhan, setKeluhan] = useState('')
-    const [dataKeluhan,setDataKeluhan] = useState([])
-
-    let dataKeluhanString = JSON.stringify(dataKeluhan)
-    localStorage.setItem('keluhanKey', dataKeluhanString)
 
     function handleSubmitKeluhan(e) {
         e.preventDefault()
-        const newKeluhan = {
-            namalengkap: namaLengkap,
-            email: emailKeluhan,
-            keluhan: keluhan
-        }
 
-        setDataKeluhan([...dataKeluhan, newKeluhan])
+        axios.post(url, {
+            body: {
+                namalengkap: namaLengkap,
+                email: emailKeluhan,
+                keluhan: keluhan
+            }
+        }).then((res) => {
+            alert(res.data.Message)
+        })
 
         setNamaLengkap('')
         setEmailKeluhan('')
-        setKeluhan('')
-
-        alert('Keluhan Sudah Dikirim, Terima Kasih Atas Keluhan Anda')
+        setKeluhan('')        
     }
 
   return (

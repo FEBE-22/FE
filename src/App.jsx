@@ -5,7 +5,6 @@ import {Routes, Route} from 'react-router-dom'
 import Register from './pages/Register'
 import Profilpage from './pages/Profilpage'
 import Riwayat from './pages/Riwayat'
-import DokterFav from './pages/DokterFav'
 import React from 'react'
 
 function App() {
@@ -16,7 +15,6 @@ function App() {
         <Route path='/register' element={<Register/>}/>
         <Route path='/profil' element={<Profilpage/>}/>
         <Route path='/riwayat' element={<Riwayat/>}/>
-        <Route path='/dokterfavorit' element={<DokterFav/>}/>
       </Routes>
     </div>
   )
