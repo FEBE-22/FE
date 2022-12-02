@@ -27,6 +27,8 @@ function LoginForm() {
             alert(res.data.message)
             localStorage.setItem("token", res.data.token)
             localStorage.setItem("id_user", res.data.id_user)
+            localStorage.setItem("user_nama_depan", res.data.nama_depan)
+            localStorage.setItem("user_nama", res.data.nama)
             dispatch(loggeduser(true))
             if (res.data.role == 'user'){
                 navigate('/')
@@ -35,12 +37,15 @@ function LoginForm() {
                 navigate('/admin')
             }
         })
+        .catch((error) => {
+            alert('Email dan Password Tidak Sesuai')
+        })
     }
  
 
 
     return (
-        <section>
+        <section className='login-section'>
         
         <div id="login-wrap">
             <div id="login-box">

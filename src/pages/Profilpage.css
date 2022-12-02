@@ -103,6 +103,7 @@ input[name='jenis_kelamin']{
     padding: 5px;
     font-size: 1.5rem;
     font-weight: 600;
+    transition: .4s;
 }
 
 /* Riwayat */
@@ -148,6 +149,12 @@ input[name='jenis_kelamin']{
 }
 .docfav-icon-3:hover{
     color: #F03E85;
+}
+
+/* Hover */
+.btn-1:hover, .btn-2:hover{
+    color: #6599E8;
+    background-color: #65DBE8;
 }
 
 /* Responsive */

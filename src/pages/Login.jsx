@@ -6,7 +6,7 @@ import React from 'react'
 function Login() {
     return(
         <>
-            <Nav />
+            <Nav beranda={'Beranda'} listdokter={'List Dokter'} log={'Login'}/>
             <LoginForm/>
         </>
         

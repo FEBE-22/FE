@@ -62,7 +62,7 @@ function FormRegister() {
                         <h5>Silahkan Register Di Sini</h5>
                     </div>
                     <form id="frm" onSubmit={handleRegister}>
-                        <div className="form-box" id="nama-depan-belakang">
+                        <div className="register-form-box" id="nama-depan-belakang">
                             <div>
                                 <label>Nama Depan</label>
                                 <div className="input-wrapper" name="for-nama-depan">
@@ -76,32 +76,32 @@ function FormRegister() {
                                 </div>
                             </div>
                         </div>
-                        <div className="form-box">
+                        <div className="register-form-box">
                             <label>Email</label>
                             <div className="input-wrapper">
                                 <input type="email" name="Email" className="input-form" id="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
                             </div>
                         </div>
-                        <div className="form-box">
+                        <div className="register-form-box">
                             <label>Password</label>
                             <div className="input-wrapper">
                                 <input type="password" name="Password" className="input-form" id="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
                             </div>
                             <span>Minimal 6 karakter</span>
                         </div>
-                        <div className="form-box">
+                        <div className="register-form-box">
                             <label>Konfirmasi Password</label>
                             <div className="input-wrapper">
                                 <input type="password" name="Konfirmasi Password" className="input-form" id="confirm-password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required />
                             </div>
                         </div>
-                        <div className="form-box">
+                        <div className="register-form-box">
                             <input type="checkbox" required />
                             <span>Saya setuju dengan syarat dan ketentuan</span>
                         </div>
                         <button type="submit">Register</button>
                     </form>
-                    <p>Sudah Punya Akun ? <Link to={'/login'}><span name='login'>Login</span></Link> Di Sini</p>
+                    <p>Sudah Punya Akun ? <Link to={'/login'} className='login-span'><span name='login'>Login</span></Link> Di Sini</p>
                 </div>
             </div>
         </main>

@@ -13,7 +13,7 @@ function Homepage() {
 
   return (
     <>
-        <Nav/>
+        <Nav beranda={'Beranda'} listdokter={'List Dokter'} log={'Login'}/>
         {
           login == false ?  <Header link={"/login"} /> :  <Header link={"/listdokter"} />
         }

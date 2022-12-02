@@ -1,8 +1,12 @@
 span[name='tele'], span[name='login']{
     color: #6599E8;
+    transition: .4s;
 }
 span[name='doc']{
     color: #F03E85;
+}
+.login-span{
+    transition: .4s;
 }
 
 /* Header */
@@ -56,11 +60,12 @@ span[name='doc']{
     border-radius: 5px;
     color: #fff;
     margin-top: 36px;
+    transition: .4s;
 }
 .register-main a{
     text-decoration: none;
 }
-.form-box{
+.register-form-box{
     margin-top: 16px;
 }
 .input-form{
@@ -86,6 +91,18 @@ span[name='doc']{
     width: inherit;
     border: solid thin #6599E8;
     border-radius: 5px;
+}
+
+/* Hover */
+.register-main button:hover{
+    color: #6599E8;
+    background-color: #65DBE8;
+}
+span[name='login']:hover{
+    color: #fff;
+}
+.login-span:hover{
+    background-color: #6599E8;
 }
 
 /* Responsive */
@@ -119,10 +136,10 @@ span[name='doc']{
     #nama-belakang{
         margin-top: 8px;
     }
-    .form-box{
+    .register-form-box{
         margin-top: 8px;
     }
-    .form-box span{
+    .register-form-box span{
         font-size: 0.7rem;
     }
     .input-form-nama{
@@ -139,7 +156,7 @@ span[name='doc']{
     .register-main>div>div p{
         font-size: 0.6rem;
     }
-    .form-box span{
+    .register-form-box span{
         font-size: 0.6rem;
     }
 }

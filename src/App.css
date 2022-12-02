@@ -41,14 +41,13 @@ nav ul li a{
   font-size: 1rem;
   transition: .4s;
 }
-nav ul li a[href="/login"]{ 
+.btn-login{
   padding: 12px 32px;
-}
-nav ul li a[href="/login"], .row a[href="/login"]{
   color: #fff;
   border-radius: 10px;
   font-weight: 800;
   background-color: #6599E8;
+  transition: .4s;
 }
 nav ul li img{
   width: 50px;
@@ -83,11 +82,8 @@ div.row{
   padding-right: 91%;
   color: #000;
 }
-.row a[href="#about-us"]{
+.nav-list{
   padding-right: 85%;
-}
-.row a[href="/login"]{
-  padding: 12px 38vw;
 }
 .nav-icon{
   width: 32px;
@@ -95,10 +91,10 @@ div.row{
 }
 
 /* Hover */
-a[href="/"]:hover, a[href="#about-us"]:hover, a[href="/login"]:hover{
+a[href="/"]:hover, a[href="#about-us"]:hover, .btn-login:hover{
   color: #6599E8;
 }
-a[href="/login"]:hover{
+.btn-login:hover{
   background-color: #65DBE8;
 }
 
@@ -122,9 +118,12 @@ a[href="/login"]:hover{
   #check-1:checked~.container{
       display: unset;
   }
+  .btn-login{
+    padding: 12px 32vw;
+  }
 }
 @media screen and (max-width: 768px){
-  .row a[href="#about-us"]{
+  .nav-list{
       padding-right: 83%;
   }
 }
@@ -147,20 +146,17 @@ a[href="/login"]:hover{
       width: 50px;
       height: 50px;
   }
-  .row a[href="#about-us"]{
+  .nav-list{
       padding-right: 69%;
-  }
-  .row a[href="/login"]{
-      padding: 12px 32vw;
   }
 }
 @media screen and (max-width: 375px){
-  .row a[href="#about-us"]{
+  .nav-list{
       padding-right: 64%;
   }
 }
 @media screen and (max-width: 320px){
-  .row a[href="#about-us"]{
+  .nav-list{
       padding-right: 57%;
   }
 }
