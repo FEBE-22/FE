@@ -6,7 +6,7 @@ import './Profilpage.css'
 function Profilpage() {
   return (
     <>
-      <Nav/>
+      <Nav beranda={'Beranda'} listdokter={'List Dokter'}/>
       <section className='profil'>
         <div className="row w-auto">
             <ProfilMenu style1={'#e0e3e7'} />

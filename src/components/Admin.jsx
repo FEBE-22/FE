@@ -3,60 +3,49 @@ import DocPhoto from '../assets/dalton-doctor.svg'
 import { RiStethoscopeLine } from "react-icons/ri";
 import { BiLike, BiBriefcaseAlt } from "react-icons/bi";
 import axios from 'axios';
-import { BsSearch } from "react-icons/bs";
+import { Link, useNavigate } from 'react-router-dom';
 
-function Listdokter() {
+function Admin() {
   const url = `https://be-production-85d3.up.railway.app/dokter`
   const [dokter, setDokter] = useState([])
-  const [searchValue, setSearchValue] = useState('')
-  const [filter, setFilter] = useState([])
+  const navigate = useNavigate()
 
   useEffect(() => {
     axios(url)
     .then((res) => {
         setDokter(res.data.data)
-        setFilter(res.data.data)
     })
   }, [])
-  
-  function handleSearch(e){
-    e.preventDefault()
-    if (searchValue) {
-        const filterData = dokter.filter((item) => {
-            return item.nama.toLowerCase().includes(searchValue.toLowerCase())
-        })
-        setDokter(filterData)
-    }
-    else{
-        setDokter(filter)
-    }
+
+  function directUpdate(id){
+    navigate(`updateform/${id}`)
+  }
+
+  function deleteData(id){
+    axios.delete(`https://be-production-85d3.up.railway.app/dokter/byId?id=${id}`)
+    .then((res) => {
+        alert(res.data.message)
+    })
+  }
+
+  function handleLogout(){
+    localStorage.clear()
+    navigate('/')
   }
 
   return (
     <>
-        <div className='row justify-content-center mt-5 w-auto'>
-            <div className='col-10'>
-                <div className='row w-auto'>
-                    <div className='col g-0'>
-                        <form className='row justify-content-center' onSubmit={(e) => handleSearch(e)}>
-                            <button type='submit' className='col-9 col-md-1 order-2 order-md-1 btn-3'>Cari</button>
-                            <div className='col-9 col-md-11 order-1 order-md-2'>
-                                <div className='row search-input-wrapper w-auto'>
-                                    <input type="text" name='search' placeholder='Cari Dokter' className='col-10 col-md-11 search-input' value={searchValue} onChange={(e) => setSearchValue(e.target.value)}/>
-                                    <div className='col-2 col-md-1 bg-white text-center align-self-center'>
-                                        <BsSearch className='search-icon' size={'100%'}/>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
+        <div className='row justify-content-center mt-5'>
+            <button className='col-8 btn-8' onClick={handleLogout}>Logout</button>
         </div>
         <div className='row justify-content-center mt-5'>
-            <div className='col-10 g-0 text-center text-md-start'>
-                <h1 className='listdoc-title'>Rekomendasi Dokter</h1>
-                <h4 className='listdoc-sub-title'>Buat janji dengan dokter plihan</h4>
+            <div className='col-9 text-center text-md-start'>
+                <div className='row justify-content-center flex-wrap w-auto'>
+                    <h1 className='col-12 col-md-10 listdoc-title'>List Dokter</h1>
+                    <Link to={'/admin/tambahform'} className='col-8 col-md-2 align-self-center justify-self-center text-center btn-wrapper'>
+                        <button className='btn-4'>Tambah</button>
+                    </Link>
+                </div>
             </div>
         </div>
         <div className='row justify-content-center mt-4'>
@@ -100,7 +89,8 @@ function Listdokter() {
                                     </div>
                                 </div>
                                 <div className='row justify-content-end ms-0 me-0 my-4 w-auto'>
-                                    <button type='submit' className='col-4 col-sm-3 btn-2'>Book</button>
+                                    <button onClick={() => directUpdate(item._id)} className='col-4 col-sm-3 me-3 btn-5'>Update</button>
+                                    <button onClick={() => deleteData(item._id)} className='col-4 col-sm-3 btn-6'>Delete</button>
                                 </div>
                             </div>
                         ))
@@ -112,4 +102,4 @@ function Listdokter() {
   )
 }
 
-export default Listdokter
+export default Admin

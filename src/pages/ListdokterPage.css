@@ -48,6 +48,13 @@
     border-end-start-radius: 4px;
     font-weight: 800;
     font-size: 1.25rem;
+    transition: .4s;
+}
+
+/* Hover */
+.btn-3:hover{
+    color: #6599E8;
+    background-color: #65DBE8;
 }
 
 /* Responsive */
