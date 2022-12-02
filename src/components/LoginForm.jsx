@@ -28,7 +28,12 @@ function LoginForm() {
             localStorage.setItem("token", res.data.token)
             localStorage.setItem("id_user", res.data.id_user)
             dispatch(loggeduser(true))
-            navigate('/')
+            if (res.data.role == 'user'){
+                navigate('/')
+            }
+            else{
+                navigate('/admin')
+            }
         })
     }
  
