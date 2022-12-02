@@ -2,6 +2,7 @@ import './Register.css'
 import FormRegister from '../components/FormRegister'
 import Nav from '../components/Nav'
 import React from 'react'
+import Helmet from 'react-helmet'
 
 function Register() {
   return (

@@ -2,6 +2,7 @@ import Nav from "../components/Nav"
 import ProfilMenu from "../components/ProfilMenu"
 import RiwayatSaya from "../components/RiwayatSaya"
 import './Profilpage.css'
+import Helmet from 'react-helmet'
 
 function Riwayat() {
   return (

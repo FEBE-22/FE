@@ -2,6 +2,7 @@ import Nav from '../components/Nav'
 import ProfilMenu from '../components/ProfilMenu'
 import ProfilSaya from '../components/ProfilSaya'
 import './Profilpage.css'
+import Helmet from 'react-helmet'
 
 function Profilpage() {
   return (

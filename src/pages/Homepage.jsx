@@ -6,6 +6,7 @@ import '../pages/Homepage.css'
 import Copyright from '../components/Copyright'
 import { useSelector } from 'react-redux'
 import React from 'react'
+import Helmet from 'react-helmet'
 
 function Homepage() {
   const isLogin = useSelector(state => state.login_key)

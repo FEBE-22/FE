@@ -2,6 +2,7 @@ import React from 'react'
 import Nav from '../components/Nav'
 import UpdateForm from '../components/UpdateForm'
 import './AdminPage.css'
+import Helmet from 'react-helmet'
 
 function AdminUpdateForm() {
   return (
