@@ -1,8 +1,5 @@
 import axios from "axios";
 import React, {useState} from "react";
-import dana from "../assets/dana.png";
-import ovo from "../assets/ovo.png"
-import paypal from "../assets/paypal.png"
 import { useNavigate, useParams } from "react-router-dom";
 
 

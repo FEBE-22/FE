@@ -11,6 +11,9 @@ import { Route, Routes } from 'react-router-dom'
 import AdminPage from './pages/AdminPage'
 import AdminTambahForm from './pages/AdminTambahForm'
 import AdminUpdateForm from './pages/AdminUpdateForm'
+import Dokterpesan from './pages/Dokterpesan'
+import Dokterpembayaran from './pages/Dokterpembayaran'
+import CheckoutPage from './pages/CheckoutPage'
 
 function App() {
   return (
@@ -27,6 +30,9 @@ function App() {
           <Route path='tambahform' element={<AdminTambahForm/>}/>
           <Route path='updateform/:id' element={<AdminUpdateForm/>}/>
         </Route>
+        <Route path='/dokter/:id' element={<Dokterpesan/>}/>
+        <Route path='/pembayaran/:id' element={<Dokterpembayaran/>}/>
+        <Route path='/checkout/:id' element={<CheckoutPage/>}/>
       </Routes>
     </div>
   )

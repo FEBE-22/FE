@@ -38,7 +38,7 @@ function LoginForm() {
             }
         })
         .catch((error) => {
-            alert('Email dan Password Tidak Sesuai')
+            console.log(error)
         })
     }
  
