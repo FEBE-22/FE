@@ -6,6 +6,9 @@ import './Profilpage.css'
 function Profilpage() {
   return (
     <>
+      <Helmet>
+          <title>Profil - TeleDoc</title>
+      </Helmet>
       <Nav beranda={'Beranda'} listdokter={'List Dokter'}/>
       <section className='profil'>
         <div className="row w-auto">

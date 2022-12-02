@@ -6,6 +6,9 @@ import './Profilpage.css'
 function Riwayat() {
   return (
     <>
+      <Helmet>
+          <title>Riwayat Kesehatan - TeleDoc</title>
+      </Helmet>
       <Nav beranda={'Beranda'} listdokter={'List Dokter'}/>
       <section className='profil'>
         <div className="row w-auto">

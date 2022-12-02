@@ -6,6 +6,9 @@ import './AdminPage.css'
 function AdminPage() {
   return (
     <>
+      <Helmet>
+            <title>Admin - TeleDoc</title>
+        </Helmet>
         <Nav style1={'hidden'}/>
         <Admin/>
     </>

@@ -6,6 +6,9 @@ import React from 'react'
 function Register() {
   return (
     <>
+        <Helmet>
+            <title>TRegister - TeleDoc</title>
+        </Helmet>
         <Nav beranda={'Beranda'} listdokter={'List Dokter'} log={'Login'}/>
         <FormRegister/>
     </>

@@ -7,6 +7,9 @@ import React from 'react'
 function Dokterpesan() {
     return(
         <>
+            <Helmet>
+                <title>Pesan Dokter - TeleDoc</title>
+            </Helmet>
             <Nav/>
             <DetailDokter/>
         </>

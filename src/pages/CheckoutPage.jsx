@@ -6,6 +6,9 @@ import './CheckoutPage.css'
 function CheckoutPage() {
     return(
         <>
+            <Helmet>
+                <title>Checkout Pembayaran - TeleDoc</title>
+            </Helmet>
             <Nav/>
             <CheckComp/>
         </>
