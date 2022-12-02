@@ -12,8 +12,8 @@ function Bayar() {
 
 
     const idu = localStorage.getItem("id_user")
-    const idh = localStorage.getItem("harga")
     const detail = JSON.parse(localStorage.getItem("detail"))
+    const idh = detail.harga
     
     let rp_harga = detail.harga
     let harga = rp_harga.replace('Rp. ','');
