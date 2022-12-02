@@ -6,6 +6,9 @@ import './AdminPage.css'
 function AdminUpdateForm() {
   return (
     <>
+        <Helmet>
+            <title>Update Dokter - TeleDoc</title>
+        </Helmet>
         <Nav style1={'hidden'}/>
         <UpdateForm/>
     </>

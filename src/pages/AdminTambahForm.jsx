@@ -6,6 +6,9 @@ import './AdminPage.css'
 function AdminTambahForm() {
   return (
     <>
+        <Helmet>
+            <title>Tambah Dokter - TeleDoc</title>
+        </Helmet>
       <Nav style1={'hidden'}/>
       <TambahForm/>
     </>

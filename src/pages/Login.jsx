@@ -6,6 +6,9 @@ import React from 'react'
 function Login() {
     return(
         <>
+            <Helmet>
+                <title>Login - TeleDoc</title>
+            </Helmet>
             <Nav beranda={'Beranda'} listdokter={'List Dokter'} log={'Login'}/>
             <LoginForm/>
         </>

@@ -6,6 +6,9 @@ import Nav from '../components/Nav'
 function ListdokterPage() {
   return (
     <>
+        <Helmet>
+            <title>List Dokter - TeleDoc</title>
+        </Helmet>
         <Nav beranda={'Beranda'} listdokter={'List Dokter'}/>
         <Listdokter/>
     </>

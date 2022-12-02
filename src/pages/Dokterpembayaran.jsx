@@ -6,6 +6,9 @@ import './Dokterpembayaran.css'
 function Dokterpembayaran(){
     return (
         <>
+            <Helmet>
+                <title>Pembayaran - TeleDoc</title>
+            </Helmet>
             <Nav/>
             <Bayar/>
         </>

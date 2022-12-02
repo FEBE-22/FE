@@ -13,6 +13,9 @@ function Homepage() {
 
   return (
     <>
+        <Helmet>
+            <title>TeleDoc - Booking Dokter</title>
+        </Helmet>
         <Nav beranda={'Beranda'} listdokter={'List Dokter'} log={'Login'}/>
         {
           login == false ?  <Header link={"/login"} /> :  <Header link={"/listdokter"} />
