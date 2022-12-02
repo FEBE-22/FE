@@ -5,6 +5,11 @@ import axios from "axios"
 import { useParams } from "react-router-dom"
 import {Icon} from "react-icons-kit"
 import {arrow_left} from 'react-icons-kit/ikons/arrow_left'
+import {man} from 'react-icons-kit/ionicons/man'
+import {iosMedkit} from 'react-icons-kit/ionicons/iosMedkit'
+import {cash} from 'react-icons-kit/ionicons/cash'
+import {iosStopwatch} from 'react-icons-kit/ionicons/iosStopwatch'
+import {user} from 'react-icons-kit/ikons/user'
 
 function DetailDokter() {
     let [listDokter, setList] = useState('')
@@ -55,10 +60,10 @@ function DetailDokter() {
                     <img src={FotoD} alt="dokter" className="dd-img"/>
                 </div>
                 <div className="dd-right">
-                    <p className="right-p">{namaDokter}</p>
-                    <p className="right-p">{kriteriaDokter}</p>
-                    <p className="right-p">{pengalamanDokter}</p>
-                    <p className="right-p">{dokterHarga}</p>
+                    <p className="right-p"><Icon icon={user} className='d-icon' size='20'/>{namaDokter}</p>
+                    <p className="right-p"><Icon icon={iosMedkit} className='d-icon' size='20'/>{kriteriaDokter}</p>
+                    <p className="right-p"><Icon icon={iosStopwatch} className='d-icon' size='20'/>{pengalamanDokter}</p>
+                    <p className="right-p"><Icon icon={cash} className='d-icon' size='20'/>{dokterHarga}</p>
                 </div>
             </div>
             <form className="detail-info-submit" onSubmit={handleSubmit}>

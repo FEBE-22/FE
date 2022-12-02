@@ -29,6 +29,8 @@
 }
 
 .dd-img{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 1em;
     width: 18em;
     height: 12em;
     margin-right: 1em;
@@ -183,4 +185,12 @@ input:checked + .b-label{
         width: 10em;
         height: 6em;
     }
+}
+
+.d-icon{
+    margin-right: 1.4em;
+    color: #7aaaf3;
+}
+
+.dd-right p{
 }
