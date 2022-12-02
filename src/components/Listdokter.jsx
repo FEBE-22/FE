@@ -4,12 +4,16 @@ import { RiStethoscopeLine } from "react-icons/ri";
 import { BiLike, BiBriefcaseAlt } from "react-icons/bi";
 import axios from 'axios';
 import { BsSearch } from "react-icons/bs";
+import { useNavigate } from 'react-router-dom'
 
 function Listdokter() {
   const url = `https://be-production-85d3.up.railway.app/dokter`
   const [dokter, setDokter] = useState([])
   const [searchValue, setSearchValue] = useState('')
   const [filter, setFilter] = useState([])
+  const navigate = useNavigate()
+
+
 
   useEffect(() => {
     axios(url)
@@ -30,6 +34,12 @@ function Listdokter() {
     else{
         setDokter(filter)
     }
+  }
+
+  console.log(dokter)
+
+  function submitBook(id){
+    navigate(`/dokter/${id}`)
   }
 
   return (
@@ -100,7 +110,7 @@ function Listdokter() {
                                     </div>
                                 </div>
                                 <div className='row justify-content-end ms-0 me-0 my-4 w-auto'>
-                                    <button type='submit' className='col-4 col-sm-3 btn-2'>Book</button>
+                                    <button onClick={() => submitBook(item._id)} type='submit' className='col-4 col-sm-3 btn-2'>Book</button>
                                 </div>
                             </div>
                         ))

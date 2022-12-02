@@ -30,10 +30,15 @@ function LoginForm() {
             localStorage.setItem("user_nama_depan", res.data.nama_depan)
             localStorage.setItem("user_nama", res.data.nama)
             dispatch(loggeduser(true))
-            navigate('/')
+            if (res.data.role == 'user'){
+                navigate('/')
+            }
+            else{
+                navigate('/admin')
+            }
         })
         .catch((error) => {
-            alert('Email dan Password Tidak Sesuai')
+            console.log(error)
         })
     }
  
